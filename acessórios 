@@ -1,0 +1,20 @@
+
+from produto import Produto  
+
+class Acessorios(Produto):
+    def __init__(self, nome, preco, codigo, estoque, material, genero):
+        super().__init__(nome, preco, codigo, estoque)
+        self.__material = material
+        self.__genero = genero  
+
+    def get_material(self):
+        return self.__material
+
+    def get_genero(self):
+        return self.__genero
+
+    
+    def exibir_detalhes(self):
+        super().exibir_detalhes()
+        print(f" Material: {self.__material}")
+        print(f" Gênero: {self.__genero}")
